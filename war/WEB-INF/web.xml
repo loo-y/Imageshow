@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>Imageshow</servlet-name>
+		<servlet-class>imageshow.ImageshowServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Imageshow</servlet-name>
+		<url-pattern>/imageshow</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>upload.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value/>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StoreImage</servlet-name>
+		<servlet-class>imageshow.StoreImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StoreImage</servlet-name>
+		<url-pattern>/addImage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StoreImageByUpload</servlet-name>
+		<servlet-class>imageshow.StoreImageByUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StoreImageByUpload</servlet-name>
+		<url-pattern>/addImageByUpload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GetImage</servlet-name>
+		<servlet-class>imageshow.GetImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetImage</servlet-name>
+		<url-pattern>/image</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DownloadImage</servlet-name>
+		<servlet-class>imageshow.DownloadImage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DownloadImage</servlet-name>
+		<url-pattern>/download</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

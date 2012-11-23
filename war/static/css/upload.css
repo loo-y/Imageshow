@@ -1,0 +1,24 @@
+.add{
+	clear:left;
+	float: left;
+	margin: 5px 0;
+	display: none;
+}
+.add input{
+	display: block;	
+	width:300px;
+	margin:0;
+	padding:0;
+	margin-bottom:5px;
+}
+
+.add input.submit{
+	width:auto;
+}
+
+.sel{
+	margin: 5px 0;
+}
+.sel input,.sel label{
+	float:left;
+}
